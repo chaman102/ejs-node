@@ -1,0 +1,24 @@
+<%-include('includes/header');%>
+<%-include('includes/nav');%>
+<!-- main image & intro text -->
+<section id="intro">
+    <div class="container-lg">
+      <div class="row g-4 justify-content-center align-items-center">
+        <div class="col-6">
+        <h2 class="text-primary text-center">My Products</h2>
+        <p class="text-center">list of products...</p>
+        <% if (products.length > 0) { %>
+          <ul>
+            <% products.forEach(function(product){ %>
+              <li><%- product.title; %></li>
+            <% }); %>
+          </ul>
+          <% } else {%>
+            <h2 class="text-center fw-bold text-danger">No Product Found</h2>
+            <% }%>
+      </div></div>
+    </div>
+  </section>
+
+
+<%-include('includes/footer');%>
